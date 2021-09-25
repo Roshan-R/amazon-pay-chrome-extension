@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+  
+    "name": "Jeff's basement",
+    "description": "A Chrome Extension to add basic functionalities to amazon pay's UI",
+    "version": "1.0",
+  
+    "browser_action": {
+     "default_icon": "jeff.png",
+     "default_popup" : "popup.html"
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://www.amazon.in/pay/history*"],
+          "js": ["extension.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "permissions": [
+     "activeTab"
+    ]
+}
+  
